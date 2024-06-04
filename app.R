@@ -22,7 +22,9 @@ ui <- fluidPage(
                         "Number of bins:",
                         min = 1,
                         max = 50,
-                        value = 30)
+                        value = 30), 
+            actionButton("test_button", 
+                         "Click to Test")
         ),
 
         # Show a plot of the generated distribution
@@ -34,6 +36,12 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
+    
+    observeEvent(input$test_button, {
+        # browser()
+        # breakpoint goes below
+        print("Button Clicked")
+    })
 
     output$distPlot <- renderPlot({
         # generate bins based on input$bins from ui.R
@@ -45,6 +53,19 @@ server <- function(input, output) {
              xlab = 'Waiting time to next eruption (in mins)',
              main = 'Histogram of waiting times')
     })
+    
+    # A ton of code here just get us down screen a bit to demonstrate other 
+    # issues
+    
+    
+    
+    # this is a test var that we want to check in on
+    # input$test_button
+    
+    
+    
+    
+    
 }
 
 # Run the application 
