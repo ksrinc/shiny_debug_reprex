@@ -37,9 +37,12 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
     
+    # add an observeEvent block to test bug
     observeEvent(input$test_button, {
+        # browser works as expected here - not breaking until button click
         # browser()
-        # breakpoint goes below
+        
+        # breakpoint goes below on print and breaks early
         print("Button Clicked")
     })
 
@@ -57,10 +60,35 @@ server <- function(input, output) {
     # A ton of code here just get us down screen a bit to demonstrate other 
     # issues
     
+    #
+    #
     
+    
+    #
     
     # this is a test var that we want to check in on
     # input$test_button
+    
+    #
+    
+    #
+    
+    #
+    
+    #
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
