@@ -42,7 +42,8 @@ server <- function(input, output) {
         # browser works as expected here - not breaking until button click
         # browser()
         
-        # breakpoint goes below on print and breaks early
+        # breakpoint goes below on print and breaks early before 
+        # button click
         print("Button Clicked")
     })
 
